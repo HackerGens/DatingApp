@@ -25,14 +25,14 @@ struct Home : View {
     
     @State var profiles = [
         
-        Profile(id: 0, name: "Annie Watson", image: "p0", age: "27", offset: 0),
-        Profile(id: 1, name: "Clarie", image: "p1", age: "19", offset: 0),
-        Profile(id: 2, name: "Catherine", image: "p2", age: "25", offset: 0),
-        Profile(id: 3, name: "Emma", image: "p3", age: "26", offset: 0),
-        Profile(id: 4, name: "Juliana", image: "p4", age: "20", offset: 0),
-        Profile(id: 5, name: "Kaviya", image: "p5", age: "22", offset: 0),
-        Profile(id: 6, name: "Jill", image: "p6", age: "18", offset: 0),
-        Profile(id: 7, name: "Terasa", image: "p7", age: "29", offset: 0),
+        Profile(id: 0, name: "Annie Watson", image: "p0", description: "Profectional Artest", offset: 0),
+        Profile(id: 1, name: "Clarie", image: "p1", description: "Profectional Artest", offset: 0),
+        Profile(id: 2, name: "Catherine", image: "p2", description: "Profectional Artest", offset: 0),
+        Profile(id: 3, name: "Emma", image: "p3", description: "Profectional Artest", offset: 0),
+        Profile(id: 4, name: "Juliana", image: "p4", description: "Profectional Artest", offset: 0),
+        Profile(id: 5, name: "Kaviya", image: "p5", description: "Profectional Artest", offset: 0),
+        Profile(id: 6, name: "Jill", image: "p6", description: "Profectional Artest", offset: 0),
+        Profile(id: 7, name: "Terasa", image: "p7", description: "Profectional Artest", offset: 0),
     ]
     
     var body: some View{
@@ -131,8 +131,8 @@ struct ProfileView : View {
                             .font(.title)
                             .fontWeight(.bold)
                         
-                        Text(profile.age + " +")
-                            .fontWeight(.bold)
+                        Text(profile.description)
+                            .fontWeight(.thin)
                     }
                     .foregroundColor(.white)
                     
@@ -222,7 +222,7 @@ struct Profile : Identifiable {
     var id : Int
     var name : String
     var image : String
-    var age : String
+    var description : String
     var offset : CGFloat
 }
 
