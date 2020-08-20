@@ -47,7 +47,7 @@ struct Home : View {
                         .renderingMode(.template)
                 })
                 
-                Text("Blind Dating")
+                Text("Dating App")
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -105,7 +105,7 @@ struct ProfileView : View {
                         Spacer()
                     }
                     
-                    Text(profile.offset == 0 ? "" : (profile.offset > 0 ? "Liked" : "Rejected"))
+                    Text(profile.offset == 0 ? "" : (profile.offset > 0 ? "Like" : "Dislike"))
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
