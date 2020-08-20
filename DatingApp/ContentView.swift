@@ -169,8 +169,25 @@ struct ProfileView : View {
                         
                     }, label: {
                         
-                        Image(systemName: "checkmark")
+                        Image(systemName: "heart")
                             .font(.system(size: 24))
+                            .foregroundColor(.white)
+                            .padding(.all,20)
+                            .background(Color.red)
+                            .clipShape(Circle())
+                    })
+                    
+                    Button(action: {
+                        
+                        withAnimation(Animation.easeIn(duration: 0.8)){
+                            
+                            self.profile.offset = -500
+                        }
+                        
+                    }, label: {
+                        
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
                             .padding(.all,20)
                             .background(Color.green)
